@@ -23,25 +23,14 @@ jQuery(document).ready(function($) {
   //   $('.header__top-contacts').appendTo('[data-nav]');
   // }
   //slider
-  // if (jQuery('[data-mainslider]').length > 0) {
-  //     $('[data-mainslider]').slick({
-  //         dots: false,
-  //         speed: 300,
-  //         arrows: false,
-  //         slidesToShow: 1,
-  //         variableWidth: true
-  //     });
-  //     if ($(window).width() < 994) {
-  //       $('[data-mainslider]').slick('unslick');
-  //       $('[data-mainslider]').slick({
-  //         dots: false,
-  //         speed: 300,
-  //         arrows: false,
-  //         slidesToShow: 1,
-  //         variableWidth: false
-  //     });
-  //     }
-  // }
+  if (jQuery('[data-articles]').length > 0) {
+      $('[data-articles]').slick({
+          dots: false,
+          speed: 300,
+          arrows: true,
+          slidesToShow: 3
+      });
+  }
     if (jQuery('[data-lang]').length > 0) {
     $('[data-lang]').select2({
       width: '106',
@@ -75,7 +64,10 @@ jQuery(document).ready(function($) {
   //   dropdownParent: $('[data-shopparent]')
   // })
 
-
+  $('[data-table]').click(function(){
+    $(this).toggleClass('open');
+    $(this).closest('.top__table-item').find('[data-tableinfo]').toggleClass('active');
+  })
 
    //miss click burger
 
@@ -88,7 +80,34 @@ jQuery(document).ready(function($) {
         $('[data-nav]').removeClass("open");
       }
     });
-
+    if ($(window).width() > 993) {
+      $(function() {
+          var sidebar = $("[data-teamaside]");
+          if (sidebar.length > 0) {
+              var offset = sidebar.offset(),
+                  topPadding = 100,
+                  sidebarHeight = sidebar.height();
+              $(window).scroll(function() {
+                sectHeight = $("[data-team]").height();
+                  if ($(window).scrollTop() > offset.top) {
+                      sidebar.stop().animate({
+                          marginTop: $(window).scrollTop() - offset.top + topPadding
+                      });
+                  }
+                  if ($(window).scrollTop() < offset.top) {
+                      sidebar.stop().animate({
+                          marginTop: 0
+                      });
+                  }
+                  if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
+                      sidebar.stop().animate({
+                          marginTop: sectHeight - sidebarHeight
+                      });
+                  }
+              });
+          }
+      });
+    }
 
   
 });
