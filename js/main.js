@@ -28,6 +28,8 @@ jQuery(document).ready(function($) {
           dots: false,
           speed: 300,
           arrows: true,
+          prevArrow: '[data-prevarr]',
+          nextArrow: '[data-nextarr]',
           slidesToShow: 3
       });
   }
