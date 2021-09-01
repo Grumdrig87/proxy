@@ -23,6 +23,18 @@ jQuery(document).ready(function($) {
   //   $('.header__top-contacts').appendTo('[data-nav]');
   // }
   //slider
+  var $slider_new = $('[data-slider-new]');
+    if ($($slider_new).length > 0) {
+        $($slider_new).slick({
+            dots: false,
+            slidesToShow: 3,
+            variableWidth: true,
+            infinite: false,
+            arrows: false,
+            speed: 300,
+            slidesToScroll: 1
+        });
+    }
   if (jQuery('[data-articles]').length > 0) {
       $('[data-articles]').slick({
           dots: false,
@@ -109,6 +121,58 @@ jQuery(document).ready(function($) {
               });
           }
       });
+      $(function() {
+        var sidebar = $("[data-howaside]");
+        if (sidebar.length > 0) {
+            var offset = sidebar.offset(),
+                topPadding = 100,
+                sidebarHeight = sidebar.height();
+            $(window).scroll(function() {
+              sectHeight = $("[data-how]").height();
+                if ($(window).scrollTop() > offset.top) {
+                    sidebar.stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                }
+                if ($(window).scrollTop() < offset.top) {
+                    sidebar.stop().animate({
+                        marginTop: 0
+                    });
+                }
+                if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
+                    sidebar.stop().animate({
+                        marginTop: sectHeight - sidebarHeight
+                    });
+                }
+            });
+        }
+    });
+    $(function() {
+      var sidebar = $("[data-foraside]");
+      if (sidebar.length > 0) {
+          var offset = sidebar.offset(),
+              topPadding = 100,
+              sidebarHeight = sidebar.height();
+          $(window).scroll(function() {
+            sectHeight = $("[data-for]").height();
+              if ($(window).scrollTop() > offset.top) {
+                  sidebar.stop().animate({
+                      marginTop: $(window).scrollTop() - offset.top + topPadding
+                  });
+              }
+              if ($(window).scrollTop() < offset.top) {
+                  sidebar.stop().animate({
+                      marginTop: 0
+                  });
+              }
+              if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
+                  sidebar.stop().animate({
+                      marginTop: sectHeight - sidebarHeight
+                  });
+              }
+          });
+      }
+  });
     }
 
   
