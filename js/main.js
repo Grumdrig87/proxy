@@ -95,85 +95,40 @@ jQuery(document).ready(function($) {
       }
     });
     if ($(window).width() > 993) {
-      $(function() {
-          var sidebar = $("[data-teamaside]");
-          if (sidebar.length > 0) {
-              var offset = sidebar.offset(),
-                  topPadding = 100,
-                  sidebarHeight = sidebar.height();
-              $(window).scroll(function() {
-                sectHeight = $("[data-team]").height();
-                  if ($(window).scrollTop() > offset.top) {
-                      sidebar.stop().animate({
-                          marginTop: $(window).scrollTop() - offset.top + topPadding
-                      });
-                  }
-                  if ($(window).scrollTop() < offset.top) {
-                      sidebar.stop().animate({
-                          marginTop: 0
-                      });
-                  }
-                  if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
-                      sidebar.stop().animate({
-                          marginTop: sectHeight - sidebarHeight
-                      });
-                  }
-              });
-          }
-      });
-      $(function() {
-        var sidebar = $("[data-howaside]");
-        if (sidebar.length > 0) {
-            var offset = sidebar.offset(),
-                topPadding = 100,
-                sidebarHeight = sidebar.height();
-            $(window).scroll(function() {
-              sectHeight = $("[data-how]").height();
-                if ($(window).scrollTop() > offset.top) {
-                    sidebar.stop().animate({
-                        marginTop: $(window).scrollTop() - offset.top + topPadding
-                    });
-                }
-                if ($(window).scrollTop() < offset.top) {
-                    sidebar.stop().animate({
-                        marginTop: 0
-                    });
-                }
-                if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
-                    sidebar.stop().animate({
-                        marginTop: sectHeight - sidebarHeight
-                    });
-                }
-            });
+        function slide (aside,section) {
+            var sidebar = $(aside);
+            if (sidebar.length > 0) {
+                var offset = sidebar.offset(),
+                    topPadding = 100,
+                    sidebarHeight = sidebar.height();
+                $(window).scroll(function() {
+                  sectHeight = $(section).height();
+                    if ($(window).scrollTop() > offset.top) {
+                        sidebar.stop().animate({
+                            marginTop: $(window).scrollTop() - offset.top + topPadding
+                        });
+                    }
+                    if ($(window).scrollTop() < offset.top) {
+                        sidebar.stop().animate({
+                            marginTop: 0
+                        });
+                    }
+                    if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
+                        sidebar.stop().animate({
+                            marginTop: sectHeight - sidebarHeight
+                        });
+                    }
+                });
+            }
         }
-    });
-    $(function() {
-      var sidebar = $("[data-foraside]");
-      if (sidebar.length > 0) {
-          var offset = sidebar.offset(),
-              topPadding = 100,
-              sidebarHeight = sidebar.height();
-          $(window).scroll(function() {
-            sectHeight = $("[data-for]").height();
-              if ($(window).scrollTop() > offset.top) {
-                  sidebar.stop().animate({
-                      marginTop: $(window).scrollTop() - offset.top + topPadding
-                  });
-              }
-              if ($(window).scrollTop() < offset.top) {
-                  sidebar.stop().animate({
-                      marginTop: 0
-                  });
-              }
-              if ((offset.top + sectHeight - sidebarHeight-topPadding) <= $(window).scrollTop()) {
-                  sidebar.stop().animate({
-                      marginTop: sectHeight - sidebarHeight
-                  });
-              }
-          });
-      }
-  });
+        if ($('[data-teamaside]').length > 0) {
+            slide ("[data-teamaside]","[data-team]");
+        }
+        if ($('[data-howaside]').length > 0) {
+            slide ("[data-howaside]","[data-how]");
+        }
+        if ($('[data-foraside]').length > 0) {
+            slide ("[data-foraside]","[data-for]");
+        }
     }
-
-  
 });
