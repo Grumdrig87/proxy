@@ -29,9 +29,10 @@ jQuery(document).ready(function($) {
             dots: false,
             slidesToShow: 3,
             variableWidth: true,
-            infinite: false,
+            infinite: true,
             arrows: false,
             speed: 300,
+            centerMode: false,
             slidesToScroll: 1
         });
     }
@@ -45,6 +46,16 @@ jQuery(document).ready(function($) {
           slidesToShow: 3
       });
   }
+  if (jQuery('[data-rewiew]').length > 0) {
+    $('[data-rewiew]').slick({
+        dots: false,
+        speed: 300,
+        arrows: true,
+        prevArrow: '[data-prevrew]',
+        nextArrow: '[data-nextrew]',
+        slidesToShow: 3
+    });
+}
     if (jQuery('[data-lang]').length > 0) {
     $('[data-lang]').select2({
       width: '106',
@@ -129,6 +140,12 @@ jQuery(document).ready(function($) {
         }
         if ($('[data-foraside]').length > 0) {
             slide ("[data-foraside]","[data-for]");
+        }
+        if ($('[data-whataside]').length > 0) {
+            slide ("[data-whataside]","[data-what]");
+        }
+        if ($('[data-idealaside]').length > 0) {
+            slide ("[data-idealaside]","[data-ideal]");
         }
     }
 });
