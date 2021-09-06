@@ -57,4 +57,19 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 8" id="btn-arrow">
     <path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="tools1">
+    <rect width="56" height="56" rx="10" fill="white" fill-opacity="0.1"></rect>
+    <rect x="46" y="23" width="10" height="10" rx="2" transform="rotate(90 46 23)" fill="white"></rect>
+    <rect x="20" y="23" width="10" height="10" rx="2" transform="rotate(90 20 23)" fill="white"></rect>
+    <rect x="33" y="10" width="10" height="10" rx="2" transform="rotate(90 33 10)" fill="white"></rect>
+    <rect x="33" y="36" width="10" height="10" rx="2" transform="rotate(90 33 36)" fill="white"></rect>
+    <path d="M15 21V28V40C15 40.5523 15.4477 41 16 41H35M21 15H39C40.1046 15 41 15.8954 41 17V35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="tools2">
+    <rect width="56" height="56" rx="10" fill="white" fill-opacity="0.1"></rect>
+    <rect x="27" y="23" width="16" height="10" rx="2" fill="white"></rect>
+    <rect x="27" y="10" width="10" height="10" rx="2" transform="rotate(90 27 10)" fill="white"></rect>
+    <rect x="27" y="36" width="10" height="10" rx="2" transform="rotate(90 27 36)" fill="white"></rect>
+    <path d="M27 28H11M35 23V17C35 15.8954 34.1046 15 33 15H27M45 28H43M35 33V39C35 40.1046 34.1046 41 33 41H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 </svg>
