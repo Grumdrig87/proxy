@@ -72,6 +72,12 @@ jQuery(document).ready(function($) {
       lessLink: '<a href="#">Close <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"><path d="M1.707.293A1 1 0 1 0 .293 1.707L1.707.293zM5 5l-.707.707a1 1 0 0 0 1.414 0L5 5zm4.707-3.293A1 1 0 1 0 8.293.293l1.414 1.414zm-9.414 0l4 4 1.414-1.414-4-4L.293 1.707zm5.414 4l4-4L8.293.293l-4 4 1.414 1.414z" fill="#000"/></svg></a>'
     });
 }
+//faq
+
+jQuery('[data-faq]').click(function(){
+  jQuery(this).toggleClass('active');
+  jQuery(this).find('p').toggle(200, 'linear');
+})
   // стилизация выпадающих селектов
   function formatState (state) {
     if (!state.id) {
