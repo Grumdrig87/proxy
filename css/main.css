@@ -2101,6 +2101,9 @@ select {
 .select__wrap {
 	position: relative;
 }
+.select__wrap select {
+	cursor: pointer;
+}
 .select__wrap::after {
 	content: '';
 	display: block;
@@ -2157,4 +2160,122 @@ select {
 .quest__file-wrap p {
 	font-size: 12px;
 	line-height: 24px;
+}
+.quest__upload > span {
+	display: inline-block;
+	margin-top: 24px;
+	position: relative;
+	padding: 10px 36px;
+	background: #F6F6F6;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+}
+.quest__upload > span::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	bottom: 0;
+	left: 8px;
+	margin: auto 0;
+	background: url('../img/svg/paper.svg') no-repeat 0 0 / cover;
+}
+.quest__upload > span:not(:last-child) {
+	margin-right: 12px;
+}
+span.del {
+	position: absolute;
+	display: block;
+	width: 9px;
+	height: 9px;
+	background: url('../img/del.png') no-repeat 0 0 / cover;
+	top: 0;
+	right: 12px;
+	bottom: 0;
+	margin: auto 0;
+	cursor: pointer;
+}
+.form__submit {
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	display: inline-block;
+	margin: 24px 0 0 12px;
+	font-family: Roboto;
+	font-size: 14px;
+	padding: 14px 27px;
+}
+.footer {
+	padding: 96px 0 97px;
+	background: #FFFACD;
+}
+.footer__top {
+	padding-bottom: 44px;
+	margin-bottom: 44px;
+	border-bottom: 1px solid #EBE6B9;
+}
+.footer__mail {
+	margin-top: 44px;
+}
+.footer__mail svg {
+	margin-right: 12px;
+}
+.footer__mail a {
+	font-size: 16px;
+	line-height: 100%;
+}
+.footer__right {
+	width: 76%;
+}
+.footer__menu {
+	width: 20.5%;
+}
+.footer__menu span {
+	font-weight: 700;
+	display: block;
+	margin-bottom: 16px;
+}
+.footer__menu ul li:not(:last-child) {
+	margin-bottom: 12px;
+}
+.footer__bottom span {
+	display: block;
+	position: relative;
+	font-size: 16px;
+	color: #171717;
+	padding-right: 10px;
+	margin-right: 8px;
+}
+.footer__bottom span::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	        border-radius: 50%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto 0;
+	background: #171717;
+}
+.footer__bottom a {
+	font-size: 16px;
+	-webkit-text-decoration-line: underline;
+	   -moz-text-decoration-line: underline;
+	        text-decoration-line: underline;
+	color: #171717;
+}
+.footer__bottom a:hover {
+	text-decoration: none;
 }
