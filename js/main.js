@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 
   jQuery('[data-faq]').click(function(){
     jQuery(this).toggleClass('active');
-    jQuery(this).find('p').toggle(200, 'linear');
+    jQuery(this).find('p').slideToggle(300);
   })
   // upload
 
@@ -118,7 +118,15 @@ jQuery(document).ready(function($) {
   //   minimumResultsForSearch: Infinity,
   //   dropdownParent: $('[data-shopparent]')
   // })
-
+  jQuery('[data-btnhide]').click(function(){
+    jQuery('[data-summaryhide]').slideToggle(300);
+    jQuery(this).toggleClass('active');
+    if (jQuery(this).hasClass('active')) {
+      jQuery('[data-btnhide] span').text('Hide');
+    } else {
+      jQuery('[data-btnhide] span').text('Show details');
+    }
+  })
   $('[data-table]').click(function(){
     $(this).toggleClass('open');
     $(this).closest('.top__table-item').find('[data-tableinfo]').toggleClass('active');
