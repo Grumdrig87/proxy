@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<title>Proxy</title>
+	<meta name="keywords" content="Proxy" />
+    <meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+	<!-- OG Tags -->
+	<meta property="og:title" content="Proxy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:site_name" content="Proxy">
+    <meta property="og:description" content="" />
+    <!-- link CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <div class="black-scr" data-blkscr></div>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="container df aic jcsb">
+                <a href="index.html" class="logo df aic">
+                    <img src="img/logo.png">
+                </a>
+                <nav class="header__nav" data-nav>
+                    <ul class="df aic">
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">
+                                Proxies
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">
+                                Tools
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                Reviews
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                Comparison
+                            </a>
+                            <!-- тут должна быть цифра для сравнения -->
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__select">
+                    <select name="lang" id="lang" data-lang>
+                        <option value="eng">English</option>
+                        <option value="rus">Русский</option>
+                    </select>
+                </div>
+                <div class="menu_btn" data-burger>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumbs__wrap">
+            <div class="container">
+                <div class="breadcrumbs df aic fww">
+                    <span>
+                        <a class="breadcrumbs__link" href="index.html"> 
+                            <span>
+                                Home  
+                            </span>
+                        </a>
+                    </span>
+                    <span class="breadcrumbs__separator">
+                        <svg width='5' height='8'><use xlink:href="img/sprite.svg#bread"></use></svg>
+                    </span>
+                    <span class="breadcrumbs__current">
+                        Article
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="inner-page">
+            <div class="container df aifs jcsb">
+                <div class="inner-page__left">
+                    <section class="review-info">
+                        <h1 class="title-in">
+                            FineProxy review
+                        </h1>
+                        <div class="author df aic">
+                            <div class="author__img">
+                                <img src="img/demo/author.png" alt="">
+                            </div>
+                            <div class="author__info">
+                                <div class="author__top df aic">
+                                    <div class="author__name">
+                                        by 
+                                        <span>
+                                            Konstantin Averin
+                                        </span>
+                                    </div>
+                                    <div class="author__soc df aic">
+                                        <a href="#" class="author__soc-item df aic jcc">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" fill="none"><path d="M13 1.185a5.25 5.25 0 0 1-1.332 1.304l.008.327c0 .675-.104 1.351-.312 2.028a7.06 7.06 0 0 1-.953 1.943 7.82 7.82 0 0 1-1.527 1.645c-.591.478-1.3.858-2.13 1.143S5.037 10 4.088 10C2.608 10 1.246 9.622 0 8.865l.636.035c1.236 0 2.34-.361 3.313-1.082A2.68 2.68 0 0 1 2.4 7.314a2.49 2.49 0 0 1-.941-1.25c.17.031.337.046.502.046a2.83 2.83 0 0 0 .702-.088c-.615-.117-1.125-.407-1.531-.87S.524 4.153.524 3.546v-.031c.378.198.78.303 1.208.316-.364-.23-.653-.53-.867-.9a2.36 2.36 0 0 1-.32-1.201c0-.454.12-.877.361-1.269.669.777 1.48 1.399 2.432 1.864s1.974.724 3.065.775c-.047-.184-.07-.375-.07-.575 0-.697.26-1.292.781-1.785S8.263 0 8.999 0c.771 0 1.42.266 1.947.797.603-.113 1.167-.318 1.693-.613-.203.604-.593 1.07-1.171 1.398A5.57 5.57 0 0 0 13 1.185h0z" fill="#000"/></svg>
+                                        </a>
+                                        <a href="#" class="author__soc-item df aic jcc">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" fill="none"><path d="M11.042 1.058L12 .19V0H8.683L6.319 5.574 3.63 0H.152v.19L1.27 1.466c.109.094.166.233.152.371v5.013a.55.55 0 0 1-.161.496L0 8.794v.187h3.572v-.19L2.313 7.347c-.067-.065-.118-.143-.148-.229s-.039-.178-.025-.267V2.514l3.136 6.469h.364l2.697-6.469v5.154c0 .136 0 .163-.094.253l-.97.888V9h4.706v-.19l-.936-.868a.26.26 0 0 1-.106-.253V1.311c-.008-.047-.002-.096.016-.14s.05-.084.09-.113z" fill="#000"/></svg>
+                                        </a>
+                                        <a href="#" class="author__soc-item df aic jcc">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" fill="none"><path d="M1.155 11V5.203H.082v-1.6h1.073v-.588c0-.843.248-1.497.745-1.962S3.094.356 3.992.356A4.58 4.58 0 0 1 5.072.5l.007 1.695c-.141-.041-.33-.062-.567-.062-.697 0-1.046.301-1.046.902v.567h1.442v1.6H3.466V11H1.155z" fill="#000"/></svg>
+                                        </a>
+                                        <a href="#" class="author__soc-item df aic jcc">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" d="M5.25 12.741v-.491-.875l-.875-.875-.875-.875.875-.875.861-.861 2.639-.014.875.875 1.75.875v.875l-.875.875v.875.147A6 6 0 0 0 13 7.063l-1.625.812L9.625 7l-.875-.875h-3.5V5.25L7 4.375 6.125 3.5 7 2.625V1.75l2.141-.357C8.476 1.139 7.754 1 7 1a6 6 0 0 0-6 6c0 2.705 1.79 4.992 4.25 5.741zm2.504 1.219A7.07 7.07 0 0 1 7 14 7 7 0 1 1 7 0a7 7 0 0 1 7 7c0 3.518-2.596 6.43-5.976 6.926L7.875 14l-.121-.04zm4.806-9.219l.407 1.628a5.96 5.96 0 0 0-.407-1.628z" fill="#000"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="author__bott df aic">
+                                    <span class="author__about">
+                                        Nunc, feugiat integer condimentum sit feugiat mattis.
+                                    </span>
+                                    <span class="author__date">
+                                        22 Jan 2021
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="inner-page__right">
+                    <div id="toc_container" class="toc_white no_bullets">
+                        <p class="toc_title">Table of contents</p>
+                        <ul class="toc_list">
+                            <li>
+                                <a href="#">Introduction</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Viverra nec cursus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Fermentum sed imperdiet</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Fermentum sed imperdiet</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    User feedback details
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Experts evaluation details
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    All characteristics
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Analysis
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Conclusion
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top df jcsb aifs">
+                    <div class="footer__left">
+                        <a href="index.html" class="logo df aic">
+                            <img src="img/logo.png">
+                        </a>
+                        <div class="footer__mail df aic">
+                            <svg width='24' height='24'><use xlink:href="img/sprite.svg#mdi"></use></svg>
+                            <a href="mailto:help@proxy.info">help@proxy.info</a>
+                        </div>
+                    </div>
+                    <div class="footer__right df aifs jcsb">
+                        <div class="footer__menu">
+                            <span>
+                                Reviews
+                            </span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        FineProxy 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        RSocks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        BestProxies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Proxy-n-VPN
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        YourProxy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu">
+                            <span>
+                                Categories
+                            </span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Ut aliquam mattis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Tellus consectetur cursus
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ante dictumst magnis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Egestas sit eget
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ac vehicula sed
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu">
+                            <span>
+                                Tools
+                            </span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Free proxies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Proxy Checker
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Comparison
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu">
+                            <span>
+                                Company
+                            </span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Contacts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Comparison
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom df aic">
+                    <span>
+                        © 2021 Proxy.Info
+                    </span>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <object class="hidden" type="image/svg+xml" data="img/sprite.svg" >Your browser does not support SVG</object>
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+    <link rel="stylesheet" href="js/select2/css/select2.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <script src="js/readmore/readmore.min.js"></script>
+    <script src="js/select2/js/select2.full.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
