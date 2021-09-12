@@ -138,7 +138,11 @@ if (jQuery('[data-rev]').length > 0) {
     $(this).toggleClass('open');
     $(this).closest('.top__table-item').find('[data-tableinfo]').toggleClass('active');
   })
-
+  // tabs
+  $('[data-revtabs]').on('click', function() {
+      $(this).addClass('active').siblings().removeClass('active')
+        .closest('.review-info__forms').find('.review-info__form').removeClass('active').eq($(this).index()).addClass('active');
+      });
    //miss click burger
 
     $(document).mouseup(function (e){ // событие клика по веб-документу
@@ -150,7 +154,16 @@ if (jQuery('[data-rev]').length > 0) {
         $('[data-nav]').removeClass("open");
       }
     });
+
+
     if ($(window).width() > 993) {
+      if ($('[data-cattable]').length > 0) {
+        var offsetTable = $('[data-cattable]').offset().top;
+        var offsetCont = $('[data-offsetcont]').offset().top;
+        var tableHeight = $('[data-cattablein]').height();
+        $('[data-cattable]').css({'height': tableHeight});
+        $('[data-cattablein]').css({'top': offsetTable - offsetCont});
+      }
         function slide (aside,section,padding) {
             var sidebar = $(aside);
             if (sidebar.length > 0) {
@@ -194,6 +207,9 @@ if (jQuery('[data-rev]').length > 0) {
         }
         if ($('[data-textaside]').length > 0) {
           slide ("[data-textaside]","[data-text]",30);
+        }
+        if ($('[data-inpager]').length > 0) {
+          slide ("[data-inpager]","[data-inpagel]",100);
       }
     }
 });
