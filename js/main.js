@@ -89,6 +89,8 @@ if (jQuery('[data-rev]').length > 0) {
 
   if ($('[data-file]').length > 0) {
     $('[data-file]').on('change', function() {
+      var fileBuffer=[];
+      Array.prototype.push.apply( fileBuffer, $('[data-file]').get(0).files );
       var name_file = []; 
         for(var i = 0; i < $(this).get(0).files.length; ++i) {
           name_file.push($(this).get(0).files[i].name);
@@ -97,6 +99,10 @@ if (jQuery('[data-rev]').length > 0) {
         $("[data-upload]").html(name_file); 
         $('span.del').click(function(){
           $(this).parent().hide();
+          var spanId = $(this).parent().index();
+          for(var i = 0; i < fileBuffer.length; ++i) {
+            delete fileBuffer[spanId];
+          } 
         })
     });
   }
