@@ -850,6 +850,7 @@ input {
 }
 .providers__best ul li span {
 	text-align: center;
+	display: block;
 	padding: 4px 8px;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
@@ -1207,7 +1208,9 @@ input {
 .table__read-more .btn {
 	margin-top: 20px;
 }
-
+.table__read-more .btn svg {
+	margin-left: 10px;
+}
 .team__left {
 	width: 43%;
 }
@@ -2409,11 +2412,12 @@ select {
 }
 .file__title {
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 16px !important;
 	line-height: 24px;
 	margin-bottom: 2px;
+	display: block;
 }
-.quest__file-wrap p {
+.quest__file-wrap label span {
 	font-size: 12px;
 	line-height: 24px;
 }
@@ -3485,7 +3489,7 @@ span.del {
 	margin-top: 32px;
 }
 .othercat {
-	padding: 104px;
+	padding: 104px 0;
 	background: #FFFACD;
 	border-bottom: 1px solid #F3EDB6;
 }
@@ -3646,6 +3650,7 @@ span.del {
 }
 .blog__page-wrap .new__item {
 	height: 400px;
+	width: auto;
 }
 .blog__page-wrap .new__itemwrap {
 	width: 33.33%;
