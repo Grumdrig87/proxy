@@ -109,7 +109,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header__select">
+                <div class="header__select" data-headerselect>
                     <select name="lang" id="lang" data-lang>
                         <option value="eng">English</option>
                         <option value="it">Italiana</option>
@@ -3352,7 +3352,7 @@
         <section class="categ sect-m">
             <div class="container">
                 <h2 class="title-l">
-                    Tools
+                    Proxies by categories
                 </h2>
                 <p class="new__text">
                     Ut viverra lectus dis nulla diam fusce ultrices. Ac volutpat donec semper consequat. A, nec purus est cursus pharetra magna.
@@ -3872,52 +3872,54 @@
                 <p class="new__text">
                     Malesuada lacus nibh suspendisse vitae eget eget faucibus nisl. Cursus odio 
                 </p>
-                <form action="post" class="question__form df fww">
-                    <div class="quest__input-wrap">
-                        <span class="quest__input-title">
-                            Name
-                        </span>
-                        <input type="text" name="fio" id="fio" class="quest__input">
-                    </div>
-                    <div class="quest__input-wrap">
-                        <span class="quest__input-title">
-                            Email
-                        </span>
-                        <input type="email" name="email" id="email" class="quest__input">
-                    </div>
-                    <div class="quest__input-wrap">
-                        <span class="quest__input-title">
-                            Proxy service
-                        </span>
-                        <div class="select__wrap">
-                            <select name="service" id="service">
-                                <option value="1" selected disabled>Choose the serivce</option>
-                                <option value="serivce1">serivce</option>
-                                <option value="serivce2">serivce</option>
-                                <option value="serivce3">serivce</option>
-                            </select>
+                <div class="question__form-wrap">
+                    <form action="post" class="question__form df fww">
+                        <div class="quest__input-wrap">
+                            <span class="quest__input-title">
+                                Name
+                            </span>
+                            <input type="text" name="fio" id="fio" class="quest__input">
                         </div>
-                    </div>
-                    <div class="quest__input-wrap quest__textarea-wrap">
-                        <span class="quest__input-title">
-                            Your question
-                        </span>
-                        <textarea name="message" id="message" class="quest__input quest__textarea"></textarea>
-                    </div>
-                    <div class="quest__input-wrap quest__file-wrap">
-                        <input type="file" name="file" id="file" multiple="multiple" data-file>
-                        <label for="file">
-                            <div class="file__title">
-                                Attach files
+                        <div class="quest__input-wrap">
+                            <span class="quest__input-title">
+                                Email
+                            </span>
+                            <input type="email" name="email" id="email" class="quest__input">
+                        </div>
+                        <div class="quest__input-wrap">
+                            <span class="quest__input-title">
+                                Proxy service
+                            </span>
+                            <div class="select__wrap">
+                                <select name="service" id="service">
+                                    <option value="1" selected disabled>Choose the serivce</option>
+                                    <option value="serivce1">serivce</option>
+                                    <option value="serivce2">serivce</option>
+                                    <option value="serivce3">serivce</option>
+                                </select>
                             </div>
-                            <p>
-                                You can attach some files. Just drop it or browse the files
-                            </p>
-                        </label>
-                        <div class="quest__upload" data-upload></div>
-                    </div>
-                    <input type="submit" class="btn form__submit" value="SEND message">
-                </form>
+                        </div>
+                        <div class="quest__input-wrap quest__textarea-wrap">
+                            <span class="quest__input-title">
+                                Your question
+                            </span>
+                            <textarea name="message" id="message" class="quest__input quest__textarea"></textarea>
+                        </div>
+                        <div class="quest__input-wrap quest__file-wrap">
+                            <input type="file" name="file" id="file" multiple="multiple" data-file>
+                            <label for="file">
+                                <div class="file__title">
+                                    Attach files
+                                </div>
+                                <p>
+                                    You can attach some files. Just drop it or browse the files
+                                </p>
+                            </label>
+                            <div class="quest__upload" data-upload></div>
+                        </div>
+                        <input type="submit" class="btn form__submit" value="SEND message">
+                    </form>
+                </div>
             </div>
         </section>
         <footer class="footer">
@@ -4059,7 +4061,16 @@
             </div>
         </footer>
     </div>
-
+    <div class="cookies" data-cookies>
+        <div class="container df aic jcsb">
+            <p class="cookies__text">
+                We use cookies on our site to ensure that we give you the best browsing experience. By continuing to browse the site, you agree to this use. For more information on how we use cookies, see our <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.
+            </p>
+            <a href="javascript:void(0);" class="btn">
+                Got IT
+            </a>
+        </div>
+    </div>
     <object class="hidden" type="image/svg+xml" data="img/sprite.svg" >Your browser does not support SVG</object>
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="js/slick/slick.css">

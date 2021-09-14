@@ -59,8 +59,9 @@ jQuery(document).ready(function($) {
 }
     if (jQuery('[data-lang]').length > 0) {
     $('[data-lang]').select2({
-      width: '106',
+      width: 'auto',
       dropdownCssClass: 'select__dropdown',
+      dropdownParent: $('[data-headerselect]'),
       minimumResultsForSearch: Infinity,
       templateSelection: formatState
     })
@@ -85,6 +86,24 @@ if (jQuery('[data-rev]').length > 0) {
     jQuery(this).toggleClass('active');
     jQuery(this).find('p').slideToggle(300);
   })
+  //cookies
+  var banner = $('[data-cookies]');
+  var blockTime = localStorage.getItem('blockTime');
+  
+      if (blockTime !== null) {
+          setTimeout (function(){
+              banner.removeClass('show');
+          }, 3000);
+        } else {
+          banner.addClass('show');
+        };
+ 
+
+  banner.find('.btn').click(function() {
+    banner.removeClass('show');
+    // Устанавливаем время блокировки (текущее время + 1 час)
+    localStorage.setItem('blockTime', 1);
+  }); 
   // upload
 
   if ($('[data-file]').length > 0) {
@@ -106,7 +125,17 @@ if (jQuery('[data-rev]').length > 0) {
         })
     });
   }
-  
+  //select hover
+  $(document).on('mouseenter', '.select2-container', function(e) {
+      $(this).prev("select").select2("open");
+      $('body').addClass('open');
+  });
+
+  $(document).on('mouseleave', '.select2-container .select2-dropdown', function(e) {
+      var selectId = $(this).find("ul").attr('id').replace("select2-", "").replace("-results", "");
+      $("#"+selectId).select2("close");
+      $('body').removeClass('open');
+  });
   // стилизация выпадающих селектов
   function formatState (state) {
     if (!state.id) {
@@ -124,13 +153,7 @@ if (jQuery('[data-rev]').length > 0) {
   
     return $state;
   };
-  // $('[data-shopsselect]').select2({
-  //   width: '274',
-  //   placeholder: 'Все магазины',
-  //   dropdownCssClass: 'select__dropdown',
-  //   minimumResultsForSearch: Infinity,
-  //   dropdownParent: $('[data-shopparent]')
-  // })
+
   jQuery('[data-btnhide]').click(function(){
     jQuery('[data-summaryhide]').slideToggle(300);
     jQuery(this).toggleClass('active');
