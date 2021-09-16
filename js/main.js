@@ -1,3 +1,6 @@
+$.fn.hasAttr = function(name) {  
+  return this.attr(name) !== undefined;
+};
 jQuery(document).ready(function($) {
   // burger
   $('[data-burger]').click(function() {
@@ -144,6 +147,38 @@ if (jQuery('[data-rev]').length > 0) {
         $('body').removeClass('open');
     });
   }
+  $(".quest__input").change(function() {
+    $(this).each(function() {
+        input = $(this).val();
+        if (input) {
+            $(this).removeClass('invalid');
+        } else {
+            $(this).attr('placeholder', 'Fill the field');
+        }
+    });
+});
+$("[data-file]").change(function() {
+  $(this).each(function() {
+      input = $(this).val();
+      if (input) {
+          $(this).removeClass('invalid');
+      }
+  });
+});
+function requ() {
+  input = $(this).val();
+  if (!input && $(this).hasAttr('required')) {
+      $(this).addClass('invalid');
+      $(this).attr('placeholder', 'Fill the field')
+  } else {
+      $(this).removeClass('invalid');
+      $(this).attr('placeholder', '')
+  }
+};
+$(".form__submit").click(function() {
+  $(".quest__input").each(requ);
+  $("[data-file]").each(requ);
+});
   // стилизация выпадающих селектов
   function formatState (state) {
     if (!state.id) {

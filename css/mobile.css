@@ -72,6 +72,9 @@
 .blog__page-wrap .new__item {
   padding: 16px;
 }
+.author__bott span {
+  font-size: 13px;
+}
 }
  
 /* 769-993px */
@@ -507,6 +510,14 @@ body.open {
 .blog__page .articles__meta span {
   font-size: 11px;
 }
+.author__bott {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.author__bott span:not(:last-child) {
+  margin-bottom: 5px;
+}
 }
 
 
@@ -715,8 +726,14 @@ body.open {
 .author__name {
   margin: 0 0 15px;
 }
-.author__about {
-  display: none !important;
+.author__bott span {
+  text-align: center;
+  width: 100%;
+  padding-right: 0;
+  margin-right: 0;
+}
+.author__bott span::after {
+  display: none;
 }
 .author__bott {
   -webkit-box-pack: center;

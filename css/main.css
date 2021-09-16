@@ -2304,6 +2304,40 @@ input {
 	   -moz-border-radius: 10px;
 	        border-radius: 10px;
 }
+.quest__input:required.invalid {
+	border: 2px solid rgba(235, 87, 87, 0.6);
+}
+input[type="file"].invalid + label {
+	border: 2px dashed rgba(235, 87, 87, 0.6);
+	color: #EB5757;
+}
+input[type="file"].invalid + label::before {
+	background: url('../img/uploadinval.png') no-repeat 0 0 / cover;
+}
+.quest__input:required.invalid::-webkit-input-placeholder {
+	color: #EB5757;
+	opacity: 0.6;
+}
+.quest__input:required.invalid:-moz-placeholder {
+	color: #EB5757;
+	opacity: 0.6;
+}
+.quest__input:required.invalid::-moz-placeholder {
+	color: #EB5757;
+	opacity: 0.6;
+}
+.quest__input:required.invalid:-ms-input-placeholder {
+	color: #EB5757;
+	opacity: 0.6;
+}
+.quest__input:required.invalid::-ms-input-placeholder {
+	color: #EB5757;
+	opacity: 0.6;
+}
+.quest__input:required.invalid::placeholder {
+	color: #EB5757;
+	opacity: 0.6;
+}
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
